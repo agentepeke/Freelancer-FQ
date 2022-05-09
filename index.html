@@ -97,42 +97,44 @@
     <p>Lorem ipsum, dipisicing elit. Molestiae, quia culpa voluptate architecto quos delectus asperiores nostrum distinctio assumenda, soluta recusandae aliquid fuga placeat commodi quibusdam tenetur. Dignissimos, blanditiis nobis!</p>
     </section>
 </div> <!--cierre .servicio-->
-</main>
+
 
 <section>
     <h2> Contacto </h2>
-    <form>
+    <form class="formulario">
         <fieldset>
             <legend>Contactanos llenando todos los campos.</legend>
-
-            <div>
+            <div class="contenedorCampos">
+            <div class="campo">
             <label>Nombre</label>
-            <input type="text" placeholder="Tu Nombre"/>
+            <input class="input-text" type="text" placeholder="Tu Nombre"/>
             </div>
 
-            <div>
+            <div class="campo">
             <label>Telefono</label>
-            <input type="tel" placeholder="Tu Telefono"/>
+            <input class="input-text" type="tel" placeholder="Tu Telefono"/>
             </div>
 
-            <div>
+            <div class="campo">
             <label>Correo</label>
-            <input type="email" placeholder="Tu Correo"/>
+            <input class="input-text" type="email" placeholder="Tu Correo"/>
             </div>
 
-            <div>
+            <div class="campo">
             <label>Mensaje</label>
-            <textarea></textarea>
+            <textarea class="input-text"></textarea>
             </div>
 
-            <div>
-            <input type="submit" value="Enviar"/>
+            </div> <!-- contenedor de los campos -->
+
+            <div class="alinear-derecha flex">
+            <input class="boton w-sm-100" type="submit" value="Enviar"/>
             </div>
         </fieldset>
     </form>
 </section>
-
-<footer>
+</main>
+<footer class="footer">
 <p>Todos los derecho reservados Agentepeke</p>
 </footer>
 </body>

@@ -13,6 +13,14 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+/** Scroll snap**/
+.servicios,
+.navegacion-princial,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 *, *:before, *:after{
     box-sizing: inherit;
@@ -30,7 +38,7 @@ body{
     background-color: var(--secundario);
     color: var(--blanco);
     padding: 1rem 3rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -38,11 +46,15 @@ body{
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border-color: var(--principlal);
 }
 @media (min-width: 768px){
     .boton{
         width: auto;
     }
+}
+.boton:hover{
+    cursor: pointer;
 }
 .sombra{
     -webkit-box-shadow: -4px 6px 24px 0px rgba(253,0,97,1);
@@ -67,6 +79,21 @@ h1,h2,h3{
 /*TITULOS*/
 .titulo span {
     font-size: 2rem;
+}
+/*Utilidades*/
+.w-sm-100{
+    width: 100%;
+}
+.alinear-derecha{
+justify-content: flex-end;
+}
+.flex{
+    display: flex;
+}
+@media (min-width:768px){
+  .w-sm-100{
+    width: auto;
+  }  
 }
 /*NAVEGACION PRINCIPAL*/
 .nav-bg{
@@ -123,6 +150,7 @@ color: var(--blanco) ;
     display: flex;
     align-items: flex-end;
 }
+
  /**Servicios **/
  @media (min-width:768px){
     .servicios{
@@ -152,4 +180,58 @@ color: var(--blanco) ;
      display: flex;
      justify-content: center;
      align-items: center;
+ }
+/**formulario**/
+ .formulario{
+    background-color: var(--secundario);
+    width: min(60rem, 100%); /**Usar el valor mas pequeño**/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+ }
+ .formulario fieldset{
+     border: none;
+ }
+ .formulario legend{
+     text-align: center;
+     font-size: 1.8rem;
+     text-transform: uppercase;
+     font-weight: 700;
+     margin-bottom: 2rem;
+     color: var(--principlal)
+ }
+ @media (min-width:768px){
+    .contenedorCampos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+     }   
+     .campo:nth-child(3),
+     .campo:nth-child(4){
+         grid-column: 1 /3 ;
+     }
+ }
+ .campo{
+    margin-bottom: 1rem;
+ }
+ .campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+ }
+ .campo textarea{
+     height: 20rem;
+ }
+ .input-text{
+     width: 100%;
+     border: none;
+     padding: 1.5rem;
+     border-radius: 1rem;
+ }
+
+ /** Footer**/
+ .footer{
+     text-align: center;
  }
